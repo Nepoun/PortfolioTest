@@ -24,7 +24,7 @@ type Project = {
   demoLink?: string
   githubLink?: string
 }
-
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ""
 const projects: Project[] = [
   {
     id: 1,
@@ -34,7 +34,7 @@ const projects: Project[] = [
       pt: "Sendo desenvolvido atualmente! Um roguelike com foco em atingir a maior pontuação alta com um visual focado em relembrar jogos antigos",
     },
     media: {
-      src: "/fragmos_gif_preview.gif",
+      src: `${basePath}/fragmos_gif_preview.gif`,
       type: "gif",
     },
     tags: ["Unity", "Godot"],
@@ -48,7 +48,7 @@ const projects: Project[] = [
       pt: "Um roguelike simples criado em apenas 3 dias para uma game jam. Seu objetivo é sobreviver o maior tempo possível. Ainda planejo refazer algumas coisas do projeto",
     },
     media: {
-      src: "https://img.itch.zone/aW1hZ2UvMjkyODI0MC8xNzU0NjY1NS5wbmc=/original/PZBL17.png",
+      src: `${basePath}/triangulo_preview.png`,
       type: "image",
     },
     tags: ["Godot", "GDScript", "2D", "Pixel Art"],
@@ -62,7 +62,7 @@ const projects: Project[] = [
       pt: "Uma coleção de antigos projetos que trabalhei com foco em estudo. Quase nenhum deles é um prototipo completo ou jogavel. Você pode ver mais pelo botão 'Demo'",
     },
     media: {
-      src: "/portfoliosnippets.gif",
+      src:  `${basePath}/portfoliosnippets.gif`,
       type: "gif"
     },
     tags: ["Godot", "Unity"],
@@ -76,7 +76,7 @@ const projects: Project[] = [
       pt: "Back-end para um projeto de coleta de dados meteorologicos utilizando estações de coleta de dados(Junto do desenvolvimento de algumas estações simples dessas).",
     },
     media: {
-      src: "/tecsus.jpg",
+      src:  `${basePath}/tecsus.jpg`,
       type: "image",
     },
     tags: ["JavaScript", "Typescript", "Mysql", "API", "Web"],

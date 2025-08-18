@@ -10,19 +10,19 @@ type Skill = {
 }
 
 const skills: Skill[] = [
-  { name: "C#", level: 90, category: "languages" },
-  { name: "C++", level: 70, category: "languages" },
-  { name: "Java", level: 80, category: "languages" },
-  { name: "JavaScript/TypeScript", level: 85, category: "languages" },
-  { name: "Python", level: 70, category: "languages" },
-  { name: ".NET", level: 85, category: "backendTools" },
-  { name: "MySQL", level: 75, category: "backendTools" },
-  { name: "Git", level: 85, category: "backendTools" },
-  { name: "VSCode", level: 90, category: "backendTools" },
-  { name: "Unity", level: 90, category: "gameDev" },
-  { name: "Godot", level: 85, category: "gameDev" },
-  { name: "Blender", level: 60, category: "gameDev" },
-  { name: "Aseprite", level: 80, category: "gameDev" },
+  { name: "C#", level: 25, category: "languages" },
+  { name: "C++", level: 25, category: "languages" },
+  { name: "Java", level: 25, category: "languages" },
+  { name: "JavaScript/TypeScript", level: 25, category: "languages" },
+  { name: "Python", level: 25, category: "languages" },
+  { name: ".NET", level: 25, category: "backendTools" },
+  { name: "MySQL", level: 25, category: "backendTools" },
+  { name: "Git", level: 25, category: "backendTools" },
+  { name: "VSCode", level: 25, category: "backendTools" },
+  { name: "Unity", level: 25, category: "gameDev" },
+  { name: "Godot", level: 25, category: "gameDev" },
+  { name: "Blender", level: 25, category: "gameDev" },
+  { name: "Aseprite", level: 25, category: "gameDev" },
 ]
 
 export default function Skills() {
