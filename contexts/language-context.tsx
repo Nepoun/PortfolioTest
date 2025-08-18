@@ -30,11 +30,11 @@ const translations = {
     "about.title": "About Me",
     "about.subtitle": "Programmer & Developer",
     "about.p1":
-      "Hello! I'm a developer passionate about building efficient solutions and interactive experiences. I have a strong interest in programming, both for game development and general software systems. I aim to write clean, modular, and high-performance code.",
+      "Hey! I'm a developer who enjoys turning ideas into things people can actually use and interact with. I'm interested in both game development and software systems, and I always aim to write clean, organized code that's easy to maintain",
     "about.p2":
-      "My journey in programming began in 2017. Since then, I've explored areas such as game development with Unity and Godot, and building scalable back-ends using Java, JavaScript, C#, among other technologies suited to each project.",
+      "I started programming back in 2017 and have been exploring different areas ever since — from building games in Unity and Godot to creating scalable back-ends with Java, JavaScript, and C#. I like picking the right tool for each project.",
     "about.p3":
-      "I believe that great projects are born from the combination of solid logic, clear purpose, and strong technical execution. That's the intersection I strive to reach in every challenge.",
+      "To me, a great project happens when logic, purpose, and technical execution come together, that’s the balance I try to bring into every challenge I take on.",
     "about.card1.title": "Programming",
     "about.card1.desc": "System development, robust logic, and efficient integrations.",
     "about.card2.title": "Game Design",
@@ -89,11 +89,11 @@ const translations = {
     "about.title": "Sobre Mim",
     "about.subtitle": "Programador & Desenvolvedor",
     "about.p1":
-      "Olá! Sou um desenvolvedor apaixonado por criar soluções eficientes e experiências interativas. Tenho forte interesse em programação, tanto para desenvolvimento de jogos quanto para sistemas de software em geral. Busco escrever código limpo, modular e performático.",
+      "Oi! Sou desenvolvedor e gosto de transformar ideias em algo que as pessoas realmente possam usar e interagir. Tenho bastante interesse tanto em jogos quanto em sistemas de software, e sempre tento escrever código limpo e organizado, que seja fácil de manter. Quanto mais modular melhor",
     "about.p2":
-      "Minha jornada na programação começou em 2017. Desde então, venho explorando áreas como desenvolvimento de jogos com Unity e Godot, além de back-ends escaláveis usando Java, JavaScript, C#, entre outras tecnologias adequadas a cada projeto.",
+      "Comecei a programar em 2017 e, desde então, venho explorando bastante coisa: já criei jogos em Unity e Godot, além de trabalhar em back-ends escaláveis com linguagens como Java, JavaScript e C#. Gosto de escolher a ferramenta certa para cada projeto.",
     "about.p3":
-      "Acredito que um bom projeto nasce da combinação entre lógica sólida, propósito claro e boa execução técnica. É essa interseção que busco alcançar em cada desafio.",
+      "Pra mim, um bom trabalho nasce quando lógica, propósito e execução técnica andam juntos, é isso que procuro alcançar em cada projeto em que me envolvo.",
     "about.card1.title": "Programação",
     "about.card1.desc": "Desenvolvimento de sistemas, lógicas robustas e integrações eficientes.",
     "about.card2.title": "Game Design",
