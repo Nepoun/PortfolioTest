@@ -1,5 +1,6 @@
 {
   "name": "my-v0-project",
+  "homepage": "http://nepoun.github.io/PortfolioTest",
   "version": "0.1.0",
   "private": true,
   "scripts": {
