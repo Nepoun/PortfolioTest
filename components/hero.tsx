@@ -11,25 +11,29 @@ import { useLanguage } from "@/contexts/language-context"
 // Componente para o computador
 function Computer(props: any) {
   const computerRef = useRef<THREE.Group>(null)
-  // Carregando o modelo GLB
-  const { scene } = useGLTF("/assets/3d/computer.glb")
+  const prefix = process.env.NEXT_PUBLIC_BASE_PATH ?? ""
 
-  // Clonamos a cena para evitar problemas com múltiplas instâncias
+  // Carregando o modelo GLB já com basePath
+  const { scene } = useGLTF(`${prefix}/assets/3d/computer.glb`)
+
   const clonedScene = scene.clone()
 
   useFrame((state) => {
     if (computerRef.current) {
-      // Aplicando rotação apenas no eixo Y do próprio modelo
       computerRef.current.rotation.y = state.clock.getElapsedTime() * 0.5
-
-      // Mantendo apenas a flutuação suave no eixo Y
-      computerRef.current.position.y = Math.sin(state.clock.getElapsedTime() * 0.5) * 0.1
+      computerRef.current.position.y =
+        Math.sin(state.clock.getElapsedTime() * 0.5) * 0.1
     }
   })
 
   return (
     <group ref={computerRef} {...props}>
-      <primitive object={clonedScene} scale={1} position={[0, -0.28, 0]} rotation={[0, 0, 0]} />
+      <primitive
+        object={clonedScene}
+        scale={1}
+        position={[0, -0.28, 0]}
+        rotation={[0, 0, 0]}
+      />
     </group>
   )
 }
@@ -37,33 +41,25 @@ function Computer(props: any) {
 export default function Hero() {
   const [scrolled, setScrolled] = useState(false)
   const { t } = useLanguage()
+  const prefix = process.env.NEXT_PUBLIC_BASE_PATH ?? ""
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50)
-    }
-
+    const handleScroll = () => setScrolled(window.scrollY > 50)
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  // Função para rolar suavemente para uma seção
+  // Pré-carregamento do modelo com basePath
+  useGLTF.preload(`${prefix}/assets/3d/computer.glb`)
+
   const scrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId)
     if (section) {
-      // Calcular a posição de rolagem considerando o cabeçalho fixo (se houver)
-      const offsetTop = section.getBoundingClientRect().top + window.pageYOffset - 20
-
-      // Rolar suavemente para a seção
-      window.scrollTo({
-        top: offsetTop,
-        behavior: "smooth",
-      })
+      const offsetTop =
+        section.getBoundingClientRect().top + window.pageYOffset - 20
+      window.scrollTo({ top: offsetTop, behavior: "smooth" })
     }
   }
-
-  // Pré-carregamento do modelo
-  useGLTF.preload("/assets/3d/computer.glb")
 
   return (
     <section className="relative h-screen w-full overflow-hidden">
@@ -74,7 +70,13 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <Canvas camera={{ position: [0, 0, 5], fov: 50 }}>
           <ambientLight intensity={0.8} />
-          <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={1} castShadow />
+          <spotLight
+            position={[10, 10, 10]}
+            angle={0.15}
+            penumbra={1}
+            intensity={1}
+            castShadow
+          />
           <Computer />
           <Environment preset="city" />
           <OrbitControls
@@ -94,7 +96,6 @@ export default function Hero() {
           </h1>
         </div>
 
-        {/* Texto com efeito melhorado para legibilidade */}
         <p className="mb-8 max-w-2xl text-xl font-medium">
           <span className="typewriter-text bg-gradient-to-r from-gray-900/80 to-gray-800/80 p-2 leading-relaxed backdrop-blur-sm">
             {t("hero.subtitle")}
@@ -102,7 +103,10 @@ export default function Hero() {
         </p>
 
         <div className="flex gap-4">
-          <Button className="bg-green-500 hover:bg-green-600" onClick={() => scrollToSection("projects")}>
+          <Button
+            className="bg-green-500 hover:bg-green-600"
+            onClick={() => scrollToSection("projects")}
+          >
             {t("hero.cta.projects")}
           </Button>
           <Button
@@ -115,7 +119,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Scroll indicator - também com funcionalidade de rolagem para a próxima seção */}
       <div
         className={`absolute bottom-8 left-1/2 z-10 -translate-x-1/2 cursor-pointer transition-opacity duration-300 ${
           scrolled ? "opacity-0" : "opacity-100"
