@@ -91,7 +91,7 @@ const projects: Project[] = [
       pt: "Participei como desenvolvedor nesse projeto de jogo, trabalhando em alguns dos minigames e no tabuleiro principal. Foi um trabalho de gamedev feito com Godot, JavaScript e GDScript.",
     },
     media: {
-      src: "/ultimatejelloparty.png",
+      src: `${basePath}/ultimatejelloparty.png`,
       type: "image",
     },
     tags: ["Godot", "GDScript", "JavaScript", "GameDev"],
@@ -104,7 +104,7 @@ const projects: Project[] = [
       pt: "Desenvolvido para a TV Vanguarda, esse projeto tem por objetivo fornecer um site de análise de dados exibindo estatísticas do eleitorado dentro de sua área de cobertura no Estado de São Paulo, incluindo estado civil, escolaridade, faixa etária, renda e evolução ao longo do tempo.",
     },
     media: {
-      src: "/dsm1-preview.gif",
+      src: `${basePath}/dsm1-preview.gif`,
       type: "gif",
     },
     tags: ["Python", "Flask", "JavaScript", "Web"],
@@ -117,7 +117,7 @@ const projects: Project[] = [
       pt: "Desenvolvido em parceria com a UOL, esse projeto foca em venda cruzada (cross-selling), recomendando produtos semelhantes quando o usuário visualiza um item, incentivando o consumo e contribuindo para o aumento da receita da área de negócios.",
     },
     media: {
-      src: "/portfoliodsm-3.jpg",
+      src: `${basePath}/portfoliodsm-3.png`,
       type: "image",
     },
     tags: ["Java", "React", "Web"],
