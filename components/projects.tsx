@@ -82,9 +82,47 @@ const projects: Project[] = [
     tags: ["JavaScript", "Typescript", "Mysql", "API", "Web"],
     demoLink: "https://theachievers-front-end.vercel.app",
     githubLink: "https://github.com/TheAchieversDSM/API-2023.1-Back-End-System",
+  },
+  {
+    id: 5,
+    title: "Ultimate Jello Party",
+    description: {
+      en: "I participated as a developer in this game project, working on some of the minigames and the main board. It was a gamedev project made with Godot, JavaScript, and GDScript.",
+      pt: "Participei como desenvolvedor nesse projeto de jogo, trabalhando em alguns dos minigames e no tabuleiro principal. Foi um trabalho de gamedev feito com Godot, JavaScript e GDScript.",
+    },
+    media: {
+      src: "/ultimatejelloparty.png",
+      type: "image",
+    },
+    tags: ["Godot", "GDScript", "JavaScript", "GameDev"],
+  },
+  {
+    id: 6,
+    title: "TV Vanguarda - Electoral Data Analysis",
+    description: {
+      en: "Developed for TV Vanguarda, this API provides a data analysis website showing statistics of the electorate within its coverage area in São Paulo, including marital status, education, age group, income, and growth over time.",
+      pt: "Desenvolvido para a TV Vanguarda, esse projeto tem por objetivo fornecer um site de análise de dados exibindo estatísticas do eleitorado dentro de sua área de cobertura no Estado de São Paulo, incluindo estado civil, escolaridade, faixa etária, renda e evolução ao longo do tempo.",
+    },
+    media: {
+      src: "/dsm1-preview.gif",
+      type: "gif",
+    },
+    tags: ["Python", "Flask", "JavaScript", "Web"],
+  },
+  {
+    id: 7,
+    title: "UOL Cross-Selling Website",
+    description: {
+      en: "Developed in partnership with UOL, this project focuses on cross-selling, recommending similar products when a user views a particular item, encouraging purchases and supporting the business area’s revenue growth.",
+      pt: "Desenvolvido em parceria com a UOL, esse projeto foca em venda cruzada (cross-selling), recomendando produtos semelhantes quando o usuário visualiza um item, incentivando o consumo e contribuindo para o aumento da receita da área de negócios.",
+    },
+    media: {
+      src: "/portfoliodsm-3.jpg",
+      type: "image",
+    },
+    tags: ["Java", "React", "Web"],
   }
-]
-
+];
 export default function Projects() {
   const { t, language } = useLanguage()
   const [activeFilter, setActiveFilter] = useState("Todos")
