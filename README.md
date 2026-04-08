@@ -79,23 +79,6 @@ const projects: Project[] = [
   // Adicione mais projetos aqui
 ];
 \`\`\`
-
-### Habilidades
-
-Edite o arquivo `components/skills.tsx` para personalizar suas habilidades:
-
-\`\`\`typescript
-const skills: Skill[] = [
-  { name: "C#", level: 90, category: "languages" },
-  { name: "Unity", level: 95, category: "engines" },
-  // Adicione mais habilidades aqui
-];
-\`\`\`
-
-### Informações de Contato
-
-Edite o arquivo `components/contact.tsx` para atualizar suas informações de contato.
-
 ## 📝 Licença
 
 Este projeto está licenciado sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.

@@ -1,39 +1,89 @@
 "use client"
+
 import { motion } from "framer-motion"
 import { useLanguage } from "@/contexts/language-context"
 
 type Skill = {
   name: string
-  category: "languages" | "gameDev" | "backendTools"
+  category: "languages" | "backend" | "frontendMobile" | "databases" | "gameDev" | "tools"
 }
 
 const skills: Skill[] = [
-  { name: "C#",                    category: "languages" },
-  { name: "C++",                   category: "languages" },
-  { name: "Java",                  category: "languages" },
-  { name: "JavaScript/TypeScript", category: "languages" },
-  { name: "Python",                category: "languages" },
-  { name: ".NET",                  category: "backendTools" },
-  { name: "MySQL",                 category: "backendTools" },
-  { name: "Git",                   category: "backendTools" },
-  { name: "VSCode",                category: "backendTools" },
-  { name: "Unity",                 category: "gameDev" },
-  { name: "Godot",                 category: "gameDev" },
-  { name: "Blender",               category: "gameDev" },
-  { name: "Aseprite",              category: "gameDev" },
+  // Languages
+  { name: "C#",             category: "languages" },
+  { name: "C++",            category: "languages" },
+  { name: "TypeScript",     category: "languages" },
+  { name: "JavaScript",     category: "languages" },
+  { name: "Python",         category: "languages" },
+  { name: "Java",           category: "languages" },
+  { name: "Lua",            category: "languages" },
+  { name: "GDScript",       category: "languages" },
+
+  // Backend & APIs
+  { name: "Node.js",        category: "backend" },
+  { name: "Spring Boot",    category: "backend" },
+  { name: "PHP",            category: "backend" },
+  { name: "Ruby on Rails",  category: "backend" },
+  { name: "REST APIs",      category: "backend" },
+  { name: "Web Scraping",   category: "backend" },
+  { name: "CI/CD",          category: "backend" },
+
+  // Frontend & Mobile
+  { name: "React",          category: "frontendMobile" },
+  { name: "React Native",   category: "frontendMobile" },
+  { name: "HTML",           category: "frontendMobile" },
+  { name: "CSS",            category: "frontendMobile" },
+
+  // Databases
+  { name: "MySQL",          category: "databases" },
+  { name: "MongoDB",        category: "databases" },
+  { name: "Firebase",       category: "databases" },
+  { name: "Cassandra",      category: "databases" },
+
+  // Game Dev
+  { name: "Unity3D",        category: "gameDev" },
+  { name: "Godot",          category: "gameDev" },
+  { name: "Custom Engine",  category: "gameDev" },
+  { name: "Vulkan",         category: "gameDev" },
+  { name: "Blender",        category: "gameDev" },
+  { name: "Aseprite",       category: "gameDev" },
+
+  // Tools
+  { name: "Git",            category: "tools" },
+  { name: "GitHub",         category: "tools" },
+  { name: "Arduino",        category: "tools" },
+  { name: "DevOps",         category: "tools" },
+  { name: "Linux",          category: "tools" },
 ]
 
 export default function Skills() {
-  const { t } = useLanguage()
-
-  const languages    = skills.filter((s) => s.category === "languages")
-  const backendTools = skills.filter((s) => s.category === "backendTools")
-  const gameDev      = skills.filter((s) => s.category === "gameDev")
+  const { t, language } = useLanguage()
 
   const groups = [
-    { title: t("skills.languages"), data: languages },
-    { title: "Backend & Tools",     data: backendTools },
-    { title: "Game Development",    data: gameDev },
+    {
+      title: t("skills.languages"),
+      data: skills.filter((s) => s.category === "languages"),
+    },
+    {
+      title: language === "pt" ? "Backend & APIs" : "Backend & APIs",
+      data: skills.filter((s) => s.category === "backend"),
+    },
+    {
+      title: language === "pt" ? "Frontend & Mobile" : "Frontend & Mobile",
+      data: skills.filter((s) => s.category === "frontendMobile"),
+    },
+    {
+      title: language === "pt" ? "Banco de Dados" : "Databases",
+      data: skills.filter((s) => s.category === "databases"),
+    },
+    {
+      title: "Game Development",
+      data: skills.filter((s) => s.category === "gameDev"),
+    },
+    {
+      title: language === "pt" ? "Ferramentas" : "Tools",
+      data: skills.filter((s) => s.category === "tools"),
+    },
   ]
 
   return (
@@ -53,7 +103,7 @@ export default function Skills() {
           <div className="mx-auto h-1 w-20 bg-green-400" />
         </motion.div>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {groups.map((group, index) => (
             <motion.div
               key={group.title}

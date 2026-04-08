@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter } from "lucide-react"
+import { Mail, Phone, MapPin, Github, Linkedin } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
 
 export default function Contact() {
@@ -22,26 +22,20 @@ export default function Contact() {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
 
     try {
       const response = await fetch("https://formspree.io/f/xgvkldra", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(formData)
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
       })
 
       if (response.ok) {
         alert(t("contact.success"))
-        setFormData({
-          name: "",
-          email: "",
-          subject: "",
-          message: "",
-        })
+        setFormData({ name: "", email: "", subject: "", message: "" })
       } else {
         alert("Erro ao enviar. Tente novamente.")
       }
@@ -50,7 +44,6 @@ export default function Contact() {
       alert("Erro ao enviar. Tente novamente.")
     }
   }
-
 
   return (
     <section id="contact" className="bg-gray-950 py-20 scroll-mt-16">
@@ -63,10 +56,10 @@ export default function Contact() {
           className="mb-12 text-center"
         >
           <h2 className="mb-4 text-4xl font-bold">
-            <span className="text-green-400">console.log</span>("{t("contact.title")}"
-            <span className="text-green-400">)</span>
+            <span className="text-green-400">{"<"}</span> {t("contact.title")}{" "}
+            <span className="text-green-400">{"/>"}</span>
           </h2>
-          <div className="mx-auto h-1 w-20 bg-green-400"></div>
+          <div className="mx-auto h-1 w-20 bg-green-400" />
         </motion.div>
 
         <div className="grid gap-10 md:grid-cols-2">
@@ -97,12 +90,16 @@ export default function Contact() {
             <div className="flex space-x-4">
               <a
                 href="https://github.com/Nepoun"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="rounded-full bg-gray-800 p-3 text-green-400 transition-colors hover:bg-green-500 hover:text-white"
               >
                 <Github className="h-5 w-5" />
               </a>
               <a
-                href="www.linkedin.com/in/antonio-nepomuceno"
+                href="https://www.linkedin.com/in/antonio-nepomuceno"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="rounded-full bg-gray-800 p-3 text-green-400 transition-colors hover:bg-green-500 hover:text-white"
               >
                 <Linkedin className="h-5 w-5" />
@@ -115,7 +112,6 @@ export default function Contact() {
               >
                 <span className="text-sm font-semibold">itch.io</span>
               </a>
-
             </div>
           </motion.div>
 
