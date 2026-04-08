@@ -1,81 +1,62 @@
 import type { Config } from "tailwindcss"
 
-const config = {
+const config: Config = {
   darkMode: ["class"],
   content: [
-    "./pages/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}",
-    "*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  prefix: "",
   theme: {
-    container: {
-      center: true,
-      padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
-    },
     extend: {
+      // ─── Endesga64 color overrides ────────────────────────────────────────
+      // All existing class names in components stay the same.
+      // We just remap what those classes actually render.
       colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
+        // "green" → purple ramp from Endesga64
+        // green-300 → light purple-pink  #f389f5
+        // green-400 → medium purple      #ca52c9  (main text/border accent)
+        // green-500 → strong purple      #7a09fa  (buttons, active states)
+        // green-600 → hover purple       #3003d9
+        green: {
+          300: "#f389f5",
+          400: "#ca52c9",
+          500: "#7a09fa",
+          600: "#3003d9",
         },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
+
+        // "gray" → Endesga64 dark purple-blacks
+        // gray-300 → #c7cfdd  (light text)
+        // gray-400 → #92a1b9  (muted text)
+        // gray-500 → #657392  (dimmer muted)
+        // gray-700 → #424c6e  (subtle borders/dividers)
+        // gray-800 → #2a2f4e  (card backgrounds)
+        // gray-900 → #1a1932  (section alternates)
+        // gray-950 → #0e071b  (deepest background)
+        gray: {
+          300: "#c7cfdd",
+          400: "#92a1b9",
+          500: "#657392",
+          700: "#424c6e",
+          800: "#2a2f4e",
+          900: "#1a1932",
+          950: "#0e071b",
         },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
-        },
+
+        // #ff0040 — signature Endesga64 accent, used sparingly
+        // Use as: text-red-accent, bg-red-accent, border-red-accent
+        // Good for: hero name highlight, Steam badge, active tab dot, star icon
+        "red-accent": "#ff0040",
       },
+
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
-      keyframes: {
-        "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
-        },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
-        },
-      },
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
-      },
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config
+}
 
 export default config

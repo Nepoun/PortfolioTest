@@ -92,7 +92,7 @@ export default function Hero() {
       <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center">
         <div className="glitch-container mb-4">
           <h1 className="glitch-text text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl">
-            <span className="text-green-400">Antonio </span>Alexandre
+            <span className="text-purple-400">Antonio </span>Alexandre
           </h1>
         </div>
 
