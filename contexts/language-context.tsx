@@ -28,19 +28,16 @@ const translations = {
 
     // About
     "about.title": "About Me",
-    "about.subtitle": "Programmer & Developer",
-    "about.p1":
-      "Hey! I'm a developer who enjoys turning ideas into things people can actually use and interact with. I'm interested in both game development and software systems, and I always aim to write clean, organized code that's easy to maintain",
-    "about.p2":
-      "I started programming back in 2017 and have been exploring different areas ever since — from building games in Unity and Godot to creating scalable back-ends with Java, JavaScript, and C#. I like picking the right tool for each project.",
-    "about.p3":
-      "To me, a great project happens when logic, purpose, and technical execution come together, that’s the balance I try to bring into every challenge I take on.",
-    "about.card1.title": "Programming",
-    "about.card1.desc": "System development, robust logic, and efficient integrations.",
-    "about.card2.title": "Game Design",
-    "about.card2.desc": "Designing engaging mechanics and interactive experiences.",
-    "about.card3.title": "Problem Solving",
-    "about.card3.desc": "Performance optimization and solving complex technical challenges.",
+    "about.subtitle": "Developer · São Paulo, Brazil",
+    "about.p1": "Hey! I'm a developer who enjoys turning ideas into things people can actually use and interact with. I work across game development and software systems, and I always aim to write clean, organized code that's easy to maintain.",
+    "about.p2": "I started programming in 2017 and have been exploring a lot of different areas since, from building games in Unity and Godot to backend work with Java, Node.js, and C#. I recently graduated in Software Development from FATEC.",    
+    "about.p3": " ",
+    "about.card1.title": "Backend & APIs",
+    "about.card1.desc": "REST APIs, automation scripts, web scrapers, and large-scale database management.",
+    "about.card2.title": "Game Development",
+    "about.card2.desc": "Gameplay systems, game feel, and a custom engine built from scratch in C++ and Vulkan.",
+    "about.card3.title": "Fullstack",
+    "about.card3.desc": "React, React Native, Node.js, Spring Boot, comfortable across the whole stack.",
 
     // Projects
     "projects.title": "Projects",
@@ -87,19 +84,16 @@ const translations = {
 
     // About
     "about.title": "Sobre Mim",
-    "about.subtitle": "Programador & Desenvolvedor",
-    "about.p1":
-      "Oi! Sou desenvolvedor e gosto de transformar ideias em algo que as pessoas realmente possam usar e interagir. Tenho bastante interesse tanto em jogos quanto em sistemas de software, e sempre tento escrever código limpo e organizado, que seja fácil de manter. Quanto mais modular melhor",
-    "about.p2":
-      "Comecei a programar em 2017 e, desde então, venho explorando bastante coisa: já criei jogos em Unity e Godot, além de trabalhar em back-ends escaláveis com linguagens como Java, JavaScript e C#. Gosto de escolher a ferramenta certa para cada projeto.",
-    "about.p3":
-      "Pra mim, um bom trabalho nasce quando lógica, propósito e execução técnica andam juntos, é isso que procuro alcançar em cada projeto em que me envolvo.",
-    "about.card1.title": "Programação",
-    "about.card1.desc": "Desenvolvimento de sistemas, lógicas robustas e integrações eficientes.",
-    "about.card2.title": "Game Design",
-    "about.card2.desc": "Criação de mecânicas envolventes e experiências interativas.",
-    "about.card3.title": "Resolução de Problemas",
-    "about.card3.desc": "Otimização de performance e solução de desafios técnicos complexos.",
+    "about.subtitle": "Desenvolvedor · São Paulo, Brasil",
+    "about.p1": "Opa! Sou desenvolvedor e gosto de transformar ideias em algo que as pessoas realmente possam usar e interagir. Trabalho tanto com jogos quanto com sistemas de software, e sempre tento escrever código limpo e organizado, fácil de manter.",
+    "about.p2": "Comecei a programar em 2017 e fui explorando bastante coisa desde então, de jogos em Unity e Godot até backend com Java, Node.js e C#. Me formei recentemente em Desenvolvimento de Software pela FATEC.",
+    "about.p3": " ",
+    "about.card1.title": "Backend & APIs",
+    "about.card1.desc": "APIs REST, scripts de automação, web scrapers e gerenciamento de bancos de dados em larga escala.",
+    "about.card2.title": "Game Development",
+    "about.card2.desc": "Sistemas de gameplay, game feel e uma engine própria desenvolvida do zero em C++ e Vulkan.",
+    "about.card3.title": "Fullstack",
+    "about.card3.desc": "React, React Native, Node.js, Spring Boot, confortável em toda a stack.",
 
     // Projects
     "projects.title": "Projetos",
