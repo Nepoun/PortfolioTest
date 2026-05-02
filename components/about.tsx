@@ -11,10 +11,7 @@ export default function About() {
     <section id="about" className="py-20 scroll-mt-16">
       <div className="container mx-auto px-4">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
           className="mb-12 text-center"
         >
           <h2 className="mb-4 text-4xl font-bold">
@@ -26,10 +23,7 @@ export default function About() {
 
         <div className="grid gap-8 md:grid-cols-2">
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            viewport={{ once: true }}
             className="flex flex-col justify-center"
           >
             <h3 className="mb-4 text-2xl font-bold text-green-400">{t("about.subtitle")}</h3>
@@ -39,10 +33,7 @@ export default function About() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            viewport={{ once: true }}
             className="grid gap-6 sm:grid-cols-2"
           >
             <div className="rounded-lg bg-gray-800 p-6 shadow-lg transition-transform hover:scale-105">

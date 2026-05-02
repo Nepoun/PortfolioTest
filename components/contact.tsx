@@ -49,10 +49,7 @@ export default function Contact() {
     <section id="contact" className="bg-gray-950 py-20 scroll-mt-16">
       <div className="container mx-auto px-4">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
           className="mb-12 text-center"
         >
           <h2 className="mb-4 text-4xl font-bold">
@@ -64,10 +61,7 @@ export default function Contact() {
 
         <div className="grid gap-10 md:grid-cols-2">
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            viewport={{ once: true }}
           >
             <h3 className="mb-6 text-2xl font-bold text-green-400">{t("contact.subtitle")}</h3>
             <p className="mb-8 text-gray-300">{t("contact.desc")}</p>
@@ -116,10 +110,7 @@ export default function Contact() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            viewport={{ once: true }}
           >
             <form onSubmit={handleSubmit} className="rounded-lg bg-gray-800 p-6 shadow-lg">
               <div className="mb-4 grid gap-4 sm:grid-cols-2">

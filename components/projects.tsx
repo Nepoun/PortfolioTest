@@ -176,22 +176,16 @@ function ShowcaseCard({
   const [activeMedia, setActiveMedia] = useState(0)
 
   return (
-    // Uses animate (not whileInView) so it always fires even when already in the viewport.
-    // whileInView can silently stay at opacity:0 if the element mounts while already visible.
     <motion.div
-      initial={{ opacity: 0, y: 24 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4, delay: index * 0.08 }}
-      className="group flex flex-col overflow-hidden rounded-2xl border border-green-500/20 bg-gray-900 shadow-xl shadow-black/40 hover:shadow-green-500/10 hover:border-green-500/40 transition-all duration-500"
+      className="group flex flex-col overflow-hidden rounded-2xl border border-green-500/20 bg-gray-900 shadow-xl shadow-black/40 hover:shadow-green-500/10 hover:border-green-500/40  duration-500"
     >
       {/* Media */}
       <div className="relative aspect-video w-full shrink-0 overflow-hidden bg-gray-950">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeMedia}
-            initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
             transition={{ duration: 0.25 }}
             className="h-full w-full"
           >
@@ -220,7 +214,7 @@ function ShowcaseCard({
               <button
                 key={i}
                 onClick={() => setActiveMedia(i)}
-                className={`rounded-full px-2 py-0.5 text-xs font-medium transition-all duration-200 ${
+                className={`rounded-full px-2 py-0.5 text-xs font-medium  duration-200 ${
                   i === activeMedia
                     ? "bg-green-500 text-white"
                     : "bg-gray-800/80 text-gray-300 hover:bg-gray-700"
@@ -310,7 +304,7 @@ function ProjectCard({
       transition={{ duration: 0.35, delay: index * 0.07 }}
       whileHover={{ y: -4 }}
     >
-      <Card className="flex flex-col h-full overflow-hidden bg-gray-800 border-gray-700/50 transition-all duration-300 hover:shadow-lg hover:shadow-green-500/20 hover:border-green-500/30">
+      <Card className="flex flex-col h-full overflow-hidden bg-gray-800 border-gray-700/50  duration-300 hover:shadow-lg hover:shadow-green-500/20 hover:border-green-500/30">
         <ProjectMedia src={media.src} type={media.type} alt={project.title} poster={media.poster} />
         <CardContent className="flex flex-col flex-grow p-6">
           <h3 className="mb-2 text-xl font-bold text-green-400">{project.title}</h3>
@@ -417,7 +411,7 @@ export default function Projects() {
           <div className="flex rounded-xl border border-green-500/30 bg-gray-900 p-1 gap-1">
             <button
               onClick={() => setActiveTab("showcase")}
-              className={`flex items-center gap-2 rounded-lg px-5 py-2.5 text-sm font-semibold transition-all duration-200 ${
+              className={`flex items-center gap-2 rounded-lg px-5 py-2.5 text-sm font-semibold  duration-200 ${
                 activeTab === "showcase" ? "bg-green-500 text-black shadow" : "text-gray-400 hover:text-green-400"
               }`}
             >
@@ -426,7 +420,7 @@ export default function Projects() {
             </button>
             <button
               onClick={() => setActiveTab("all")}
-              className={`flex items-center gap-2 rounded-lg px-5 py-2.5 text-sm font-semibold transition-all duration-200 ${
+              className={`flex items-center gap-2 rounded-lg px-5 py-2.5 text-sm font-semibold  duration-200 ${
                 activeTab === "all" ? "bg-green-500 text-black shadow" : "text-gray-400 hover:text-green-400"
               }`}
             >

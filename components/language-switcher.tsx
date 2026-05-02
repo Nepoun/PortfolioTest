@@ -42,7 +42,7 @@ export default function LanguageSwitcher() {
         <DropdownMenuTrigger asChild>
           <Button
             variant="outline"
-            className={`flex items-center gap-2 rounded-full border-2 bg-gray-900/80 px-3 py-2 text-sm font-medium backdrop-blur-sm transition-all duration-300 hover:bg-green-500/20 ${
+            className={`flex items-center gap-2 rounded-full border-2 bg-gray-900/80 px-3 py-2 text-sm font-medium backdrop-blur-sm  duration-300 hover:bg-green-500/20 ${
               hasChanged ? "border-green-400 ring-2 ring-green-400/50" : "border-green-500"
             }`}
             onMouseEnter={() => setShowTooltip(true)}
@@ -93,7 +93,7 @@ export default function LanguageSwitcher() {
       <AnimatePresence>
         {showTooltip && (
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
+            initial={{ opacity: 1, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 10 }}
             className="absolute right-0 top-full mt-2 w-48 rounded-md bg-gray-800 p-2 text-center text-sm text-white shadow-lg"

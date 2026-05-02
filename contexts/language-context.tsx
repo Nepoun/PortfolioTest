@@ -22,22 +22,22 @@ const translations = {
     "nav.contact": "Contact",
 
     // Hero
-    "hero.subtitle": "A developer creating efficient solutions and immersive experiences",
+    "hero.subtitle": "Developer who loves to create cool things",
     "hero.cta.projects": "View Projects",
     "hero.cta.contact": "Contact",
 
     // About
     "about.title": "About Me",
     "about.subtitle": "Developer · São Paulo, Brazil",
-    "about.p1": "Hey! I'm a developer who enjoys turning ideas into things people can actually use and interact with. I work across game development and software systems, and I always aim to write clean, organized code that's easy to maintain.",
+    "about.p1": "Hey! I'm a developer who enjoys creating things that people can actually use and interact with. I work across game development and software systems, and I always focus on creating systems that work well for either the developer and the user.",
     "about.p2": "I started programming in 2017 and have been exploring a lot of different areas since, from building games in Unity and Godot to backend work with Java, Node.js, and C#. I recently graduated in Software Development from FATEC.",    
     "about.p3": " ",
     "about.card1.title": "Backend & APIs",
-    "about.card1.desc": "REST APIs, automation scripts, web scrapers, and large-scale database management.",
+    "about.card1.desc": "REST APIs, automation scripts, and large-scale database management.",
     "about.card2.title": "Game Development",
     "about.card2.desc": "Gameplay systems, game feel, and a custom engine built from scratch in C++ and Vulkan.",
     "about.card3.title": "Fullstack",
-    "about.card3.desc": "React, React Native, Node.js, Spring Boot, comfortable across the whole stack.",
+    "about.card3.desc": "React, C#, Java, TypeScript, Node.Js...",
 
     // Projects
     "projects.title": "Projects",
@@ -78,22 +78,22 @@ const translations = {
     "nav.contact": "Contato",
 
     // Hero
-    "hero.subtitle": "Um desenvolvedor criando soluções eficientes e experiências imersivas",
+    "hero.subtitle": "Desenvolvedor que adora criar coisas legais",
     "hero.cta.projects": "Ver Projetos",
     "hero.cta.contact": "Contato",
 
     // About
     "about.title": "Sobre Mim",
     "about.subtitle": "Desenvolvedor · São Paulo, Brasil",
-    "about.p1": "Opa! Sou desenvolvedor e gosto de transformar ideias em algo que as pessoas realmente possam usar e interagir. Trabalho tanto com jogos quanto com sistemas de software, e sempre tento escrever código limpo e organizado, fácil de manter.",
+    "about.p1": "Opa! Sou um desenvolvedor que gosta muito de criar coisas que as pessoas realmente possam usar e interagir. Trabalho tanto com jogos quanto com sistemas de software, e sempre tento criar sistemas confortáveis de usar tanto para o desenvolvedor quanto para o usuário.",
     "about.p2": "Comecei a programar em 2017 e fui explorando bastante coisa desde então, de jogos em Unity e Godot até backend com Java, Node.js e C#. Me formei recentemente em Desenvolvimento de Software pela FATEC.",
     "about.p3": " ",
     "about.card1.title": "Backend & APIs",
-    "about.card1.desc": "APIs REST, scripts de automação, web scrapers e gerenciamento de bancos de dados em larga escala.",
+    "about.card1.desc": "APIs REST, web scrapers e gerenciamento de bancos de dados em larga escala.",
     "about.card2.title": "Game Development",
     "about.card2.desc": "Sistemas de gameplay, game feel e uma engine própria desenvolvida do zero em C++ e Vulkan.",
     "about.card3.title": "Fullstack",
-    "about.card3.desc": "React, React Native, Node.js, Spring Boot, confortável em toda a stack.",
+    "about.card3.desc": "React, C#, Java, TypeScript, Node.Js...",
 
     // Projects
     "projects.title": "Projetos",

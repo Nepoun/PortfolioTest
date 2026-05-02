@@ -121,7 +121,7 @@ export default function Hero() {
 
       <div
         className={`absolute bottom-8 left-1/2 z-10 -translate-x-1/2 cursor-pointer transition-opacity duration-300 ${
-          scrolled ? "opacity-0" : "opacity-100"
+          scrolled ? "opacity-100" : "opacity-100"
         }`}
         onClick={() => scrollToSection("about")}
       >
