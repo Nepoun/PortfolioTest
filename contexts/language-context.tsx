@@ -35,7 +35,7 @@ const translations = {
     "about.card1.title": "Backend & APIs",
     "about.card1.desc": "REST APIs, automation scripts, and large-scale database management.",
     "about.card2.title": "Game Development",
-    "about.card2.desc": "Gameplay systems, game feel, and a custom engine built from scratch in C++ and Vulkan.",
+    "about.card2.desc": "Unity, Godot, Lua, and a custom engine built from scratch in C++ and Vulkan (in progress).",
     "about.card3.title": "Fullstack",
     "about.card3.desc": "React, C#, Java, TypeScript, Node.Js...",
 

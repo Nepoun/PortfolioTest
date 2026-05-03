@@ -443,8 +443,8 @@ export default function Projects() {
             >
               <p className="mb-8 text-center text-sm text-gray-500">
                 {language === "pt"
-                  ? "Projetos selecionados — os que mais curti fazer ou ainda estou desenvolvendo"
-                  : "Handpicked projects — the ones I'm most proud of or still building"}
+                  ? "Projetos Favoritos || os que mais curti fazer ou ainda estou desenvolvendo"
+                  : "Favorite Projects || the ones I'm most proud of or still building right now"}
               </p>
 
               <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-3">
