@@ -37,7 +37,7 @@ const translations = {
     "about.card2.title": "Game Development",
     "about.card2.desc": "Unity, Godot, Lua, and a custom engine built from scratch in C++ and Vulkan (in progress).",
     "about.card3.title": "Fullstack",
-    "about.card3.desc": "React, C#, Java, TypeScript, Node.Js...",
+    "about.card3.desc": "React, C#, Java, TypeScript, Ruby on Rails, Node.Js...",
 
     // Projects
     "projects.title": "Projects",
@@ -89,11 +89,11 @@ const translations = {
     "about.p2": "Comecei a programar em 2017 e fui explorando bastante coisa desde então, de jogos em Unity e Godot até backend com Java, Node.js e C#. Me formei recentemente em Desenvolvimento de Software pela FATEC.",
     "about.p3": " ",
     "about.card1.title": "Backend & APIs",
-    "about.card1.desc": "APIs REST, web scrapers e gerenciamento de bancos de dados em larga escala.",
+    "about.card1.desc": "APIs REST, automação e gerenciamento de bancos de dados em larga escala.",
     "about.card2.title": "Game Development",
-    "about.card2.desc": "Sistemas de gameplay, game feel e uma engine própria desenvolvida do zero em C++ e Vulkan.",
+    "about.card2.desc": "Unity, Godot, Lua e uma engine própria desenvolvida do zero em C++ e Vulkan (Em progresso).",
     "about.card3.title": "Fullstack",
-    "about.card3.desc": "React, C#, Java, TypeScript, Node.Js...",
+    "about.card3.desc": "React, C#, Java, TypeScript, Ruby on Rails, Node.Js...",
 
     // Projects
     "projects.title": "Projetos",
